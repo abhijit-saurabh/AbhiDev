@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="automation.Test_Case_SelectorController">
+  <children>
+    <SplitPane dividerPositions="0.16666666666666666" focusTraversable="true" orientation="VERTICAL" prefHeight="863.0" prefWidth="849.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+          <children>
+            <Label layoutX="133.0" layoutY="4.0" prefHeight="54.0" prefWidth="608.0" text="Automation Test Case Selector" textFill="#0066ff">
+              <font>
+                <Font name="System Bold" size="40.0" />
+              </font>
+            </Label>
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="452.0" prefWidth="798.0">
+          <children>
+            <Region layoutX="42.0" layoutY="61.0" prefHeight="530.0" prefWidth="337.0" />
+            <SplitPane dividerPositions="0.5" focusTraversable="true" prefHeight="278.0" prefWidth="576.0" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="83.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="38.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="315.0" prefWidth="315.0">
+                  <children>
+                    <ListView fx:id="test_case_list" layoutX="32.0" layoutY="27.0" onMouseClicked="#add_other_list" prefHeight="206.0" prefWidth="200.0" />
+                    <Label layoutX="23.0" layoutY="0.0" prefWidth="241.0" text="Available Test Case Scripts" />
+                    <Label layoutX="32.0" layoutY="244.0" prefWidth="218.0" text="Click Test Case to Select" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="301.9999000000025" prefWidth="350.0">
+                  <children>
+                    <ListView fx:id="selected_test_case" layoutX="53.0" layoutY="27.0" onMouseClicked="#remove_test_case" prefHeight="200.0" prefWidth="200.0" />
+                    <Label layoutX="44.0" layoutY="2.0" prefWidth="223.0" text="Selected Test Case Scripts" />
+                    <Label layoutX="42.0" layoutY="240.0" prefWidth="223.0" text="Click Test Case to remove" />
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+            <Button fx:id="create" layoutX="316.0" layoutY="340.0" mnemonicParsing="false" onAction="#SaveFile" text="CreateFile" />
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
